@@ -1,0 +1,91 @@
+:root{
+    --oxy-dark: #18191a !important;
+    --oxy-mid: #353739 !important;
+    --oxy-hover: #7b66ff4f !important;
+    --oxy-light-text: #e1e1e1 !important;
+    --oxy-small-text-size: 11px !important;
+    --oxy-medium-text-size: 13px !important;
+    --oxy-big-text-size: 15px !important;
+}
+/*--- Topbar ---*/
+.oxygen-editor-currently-editing{font-size:10px;align-items:center;display:flex;padding:0;max-width:110px;line-height:1.2em}
+.oxygen-formatting-toolbar{position: absolute; z-index: 10; background: var(--oxy-dark); height: 40px; padding: 0 20px; margin-left: 240px;}
+#oxygen-topbar .oxygen-media-query-panel, .oxygen-save-button{margin-left:0 !important;}
+.oxygen-media-query-panel .oxygen-current-media-query{background-color: var(--oxy-hover) !important;}
+.oxygen-add-button, .oxygen-save-button{min-width: 55px; background-color: var(--oxy-active) !important;}
+/*--- Exit Menu ---*/
+.oxygen-toolbar-button-dropdown{left: auto !important; right: 0 !important; border-radius:4px !important; box-shadow: 0px 12px 28px 12px rgba(0, 0, 0, 0.2) !important; min-width: 130px; margin-top: 4px !important;}
+.oxygen-toolbar-button-dropdown-option{font-size: var(--oxy-medium-text-size) !important; display: flex !important; align-items: center; gap: 8px; padding: 12px 15px !important; }
+.oxygen-toolbar-button-dropdown-option svg {width: 18px;}
+.oxygen-toolbar-button-dropdown-option:nth-child(1),
+.oxygen-toolbar-button-dropdown-option:nth-child(2),
+.oxygen-toolbar-button-dropdown-option:nth-child(3)
+{display: none !important;}
+/* Tooltips */
+body .oxygen-toolbar-menus > div{transition: transform 0.25s !important;}
+body .oxygen-media-queries-repeater [data-tippy-root] {border-top: none; margin-top: -10px !important;}
+body .oxygen-media-query-panel .oxy-media-query-tooltip-clear-action {display: grid;place-items: center; font-size: 14px; padding: 0; line-height: 1; padding-bottom: 2px; padding-right: 1.5px;}
+/*--- Classes Dropdown ---*/
+.oxygen-classes-dropdown{box-shadow: 0 25px 50px #383838 !important;padding: 10px !important;}
+.oxygen-classes-dropdown-input{width: 90% !important;background: var(--oxy-mid) !important;border-top-right-radius: 0 !important;border-bottom-right-radius: 0 !important;}
+.oxygen-classes-dropdown-add-class{font-size: 0 !important; position: relative;background-color: var(--oxy-active) !important;transition: .3s;margin-left: 0 !important;border-top-left-radius: 0 !important;border-bottom-left-radius: 0 !important;height: 30px; min-width: 30px !important;}
+.oxygen-classes-dropdown-add-class::before {content: "+";font-size: 22px;text-transform: uppercase;padding-bottom: 2px;}
+.oxygen-classes-dropdown li:not(:first-child):not(.oxygen-classes-dropdown-suggestions):not(.oxygen-classes-dropdown-heading):hover{background-color: var(--oxy-hover) !important;}
+/*--- Reusable Tab ---*/
+.oxygen-add-section-element.oxy-reusable-button{width: calc(50% - 8px); text-align: center;}
+/*--- Styles dot ---*/
+.oxygen-sidebar-tabs-tab.oxy-styles-present::after,
+.oxygen-sidebar-advanced-subtab.oxy-styles-present span::after
+{height: 5px !important;box-shadow: none !important;background: var(--oxy-active) !important;}
+/*--- Left panel tabs ---*/
+.oxygen-sidebar-tabs{margin-top: 130px;border-top: 1px solid #555;height: 48px !important;}
+/*--- Code block canvas ---*/
+.cm-s-default.CodeMirror{background-color: #000 !important;}
+.cm-s-default .CodeMirror-gutters{background-color: #333;}
+.CodeMirror-code{font-size: 14px;}
+/*--- Center the Viewport ---*/
+body #ct-viewport-container {display: grid;place-items: center;background: var(--oxy-dark);}
+body .oxygen-hide-sidebar-wrapper {left: 0;}
+#ct-artificial-viewport {will-change: width;transition: width 0.2s;}
+/*-------------------------- 
+* Right Sidebar
+--------------------------*/
+/* Panel header */    
+body .ct-elements-managers-top {margin: 0; background: var(--oxy-dark); width: 100%; padding: 16px;}
+body .oxygen-sidepanel-header-row {background: var(--oxy-dark);}
+body .ct-elements-managers-top-item.ct-button {font-size: 12px;}
+body .ct-elements-managers-top-item.ct-button img {width: 12px;}
+body .oxygen-close-icon {transition: transform 0.25s;}
+body .oxygen-close-icon:hover {transform: scale(1.3);}
+/* Expanded Icon */
+body .ct-expand-butt.expanded > span.ct-icon:before,
+.ct-style-set-expanded > .ct-expand-butt span.ct-icon:before
+{content: "→" !important; transform: rotate(90deg) translateY(5px) !important; width: 20px; font-weight: bold;}
+/* Increase clickable area of expand icon */
+body .ct-expand-butt.ng-scope.expanded span {display: inline-grid;}
+/* Collapsed Icon */
+body .ct-expand-butt span.ct-icon:before { content: "→"; transition: .3s; display: block; font-weight: bold;}
+/* Icon color */
+.ct-expand-butt span.ct-icon:before {color: rgba(255, 255, 255, 0.85) !important;}
+.ct-expand-butt span.ct-icon:hover:before {color: rgba(255, 255, 255, 1) !important;}
+/* Icon Fix Selectors + Css Panel */
+body .ct-tab-panel.ct-selectors-tab .ct-expand-butt,
+body .ct-elements-managers-stylesheets .ct-expand-butt
+{background-color: transparent !important;}
+/* Elements structure */
+body .sub-tree:after {border-left: 1px solid rgba(255, 255, 255, 0.3);}
+body .sub-tree .dom-tree-node:before {border-top: 1px solid rgba(255, 255, 255, 0.3);}            
+body .sub-tree .dom-tree-node:last-child:after {background: var(--oxy-mid);}
+body .ct-expand-butt {left: -20px;}
+body .sub-tree .ct-expand-butt:after {background: transparent;}
+body .oxy-drag-handle:hover, 
+body .oxy-drag-handle{opacity: 0;}
+/* Borders on element structure */
+body .dom-tree-node-label {background-color: var(--oxy-mid); border-left: solid 1px #7b66ff87 !important; border-right: solid 1px #7b66ff87 !important; border-bottom: solid 1px #7b66ff87 !important;}
+/* Hover effect on element name */
+body .dom-tree-node-label.ng-scope:hover .title {transform: translateX(5px);}
+body .dom-tree-node-label.ng-scope .title {transition: transform 0.25s; letter-spacing: 0.2px;}
+/* Slight tilt when parent element is dragged */
+body .dom-tree-node-dragged .dom-tree-node-label{rotate: 5deg; transition: rotate 0.4s;}
+/* Make structure panel slide out*/
+body .ct-panel-elements-managers {transition: 0.25s !important;}
